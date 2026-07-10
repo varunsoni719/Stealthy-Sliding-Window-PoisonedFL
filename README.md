@@ -12,14 +12,14 @@ The code is strictly deterministic, dynamically scales attack magnitudes, and is
    ```bash
    git clone <your-repo-link>
    cd <your-repo-folder>
-Install dependencies:
+
+## Install dependencies:
 Ensure you have Python 3.9+ installed, then run:
 
 Bash
 pip install -r requirements.txt
 
-##🚀 Running the Experiments
-
+## Running the Experiments
 By default, the script reads from config.yaml and executes two back-to-back experiments:
 
 Experiment 1: Original SW-PoisonedFL (No Backdoor)
@@ -36,18 +36,7 @@ You can easily point the script to a custom configuration file or specify a diff
 Bash
 python main.py --config custom_config.yaml --output_dir ./experiment_results
 
-##🔬 Reproducibility Guarantee
-To satisfy strict academic reproducibility requirements, this code enforces:
-
-Seed Locking: Enforces torch.manual_seed, np.random.seed, and Python's hashseed.
-
-Worker Seeds: DataLoader instances use custom worker_init_fn and explicitly seeded torch.Generator()s.
-
-CUDNN Determinism: torch.backends.cudnn.deterministic is set to True.
-
-Note: Slight variations (e.g., < 0.05% difference) might occur if run on vastly different hardware architectures (e.g., CPU vs. NVIDIA A100 vs. Apple Silicon) due to how parallel floating-point operations reduce matrices, but the overall trends and curves will remain identical.
-
-##📂 Project Structure
+## Project Structure
 main.py - Core federated learning simulation loop, attack vectors, and evaluation.
 
 config.yaml - Hyperparameters for dataset, non-IID splits, and attacker scaling limits.
