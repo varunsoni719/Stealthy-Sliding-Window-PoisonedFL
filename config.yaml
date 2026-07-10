@@ -1,0 +1,46 @@
+# ------------------------------------
+# Dataset & Federation Settings
+# ------------------------------------
+dataset: 'mnist'
+data_dir: './data'
+n_genuine: 1200
+fake_ratio: 0.25
+participation: 0.10
+n_rounds: 2000
+local_epochs: 1
+batch_size: 32
+lr: 0.01
+non_iid_q: 0.5
+
+# ------------------------------------
+# Attack & Defense Setup
+# ------------------------------------
+defense: 'multi_krum'
+attack: 'poisonedfl'
+seed: 42
+
+# ------------------------------------
+# Scaling & Dynamics (CDynamics)
+# ------------------------------------
+c0: 8.5
+c_min: 7.0
+c_max: 12.0
+e: 50
+beta: 0.99
+alpha: 1.05
+p_value: 0.01
+c_round_jitter: 0.03
+c_block_change_min: 0.5
+c_block_change_max: 2.0
+
+# ------------------------------------
+# Backdoor Settings (SSW-PoisonedFL)
+# ------------------------------------
+backdoor_enable: True
+backdoor_target: 0
+trigger_size: 5
+backdoor_local_epochs: 4
+sw_blend_ratio: 0.6
+backdoor_train_size: 300
+backdoor_val_size: 150
+backdoor_test_size: 150
