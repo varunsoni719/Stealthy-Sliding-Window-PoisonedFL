@@ -627,3 +627,129 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+ Using device: cuda
+
+#################################################################
+# EXPERIMENT 1: Original SW-PoisonedFL (No Backdoor)
+#################################################################
+
+=================================================================
+  Dataset: MNIST | Defense: multi_krum | Attack: poisonedfl
+  Mode: SW-PoisonedFL (Original)
+=================================================================
+100%|██████████| 9.91M/9.91M [00:00<00:00, 17.8MB/s]
+100%|██████████| 28.9k/28.9k [00:00<00:00, 477kB/s]
+100%|██████████| 1.65M/1.65M [00:00<00:00, 4.47MB/s]
+100%|██████████| 4.54k/4.54k [00:00<00:00, 10.1MB/s]
+  Attack: Original SW-PoisonedFL
+  d=139,960 | n_genuine=1200 | n_fake=300 | rounds=2000
+
+Training:   0%|          | 1/2000 [00:06<3:33:54,  6.42s/it]  Round    1 | Error: 85.9% | c: 8.50 | Lambda: 8.5000
+Training:   2%|▎         | 50/2000 [02:48<2:00:50,  3.72s/it]  Round   50 | Error: 40.5% | c: 12.00 | Lambda: 0.2244
+Training:   5%|▌         | 100/2000 [05:36<2:03:13,  3.89s/it]  Round  100 | Error: 17.9% | c: 11.72 | Lambda: 0.2068
+Training:   8%|▊         | 150/2000 [08:30<2:09:19,  4.19s/it]  Round  150 | Error: 13.7% | c: 12.00 | Lambda: 0.2105
+Training:  10%|█         | 200/2000 [11:18<1:52:49,  3.76s/it]  Round  200 | Error: 11.9% | c: 11.70 | Lambda: 0.1708
+Training:  12%|█▎        | 250/2000 [14:06<1:57:01,  4.01s/it]  Round  250 | Error: 11.2% | c: 12.00 | Lambda: 0.2416
+Training:  15%|█▌        | 300/2000 [16:49<1:48:13,  3.82s/it]  Round  300 | Error: 10.5% | c: 12.00 | Lambda: 0.1966
+Training:  18%|█▊        | 350/2000 [19:37<1:43:13,  3.75s/it]  Round  350 | Error: 10.0% | c: 11.69 | Lambda: 0.2046
+Training:  20%|██        | 400/2000 [22:18<1:39:51,  3.74s/it]  Round  400 | Error: 9.6% | c: 12.00 | Lambda: 0.2244
+Training:  22%|██▎       | 450/2000 [25:04<1:39:40,  3.86s/it]  Round  450 | Error: 9.9% | c: 11.65 | Lambda: 0.1736
+Training:  25%|██▌       | 500/2000 [27:50<1:36:27,  3.86s/it]  Round  500 | Error: 9.7% | c: 12.00 | Lambda: 0.6588
+Training:  28%|██▊       | 550/2000 [30:37<1:41:59,  4.22s/it]  Round  550 | Error: 9.3% | c: 12.00 | Lambda: 0.4563
+Training:  30%|███       | 600/2000 [33:23<1:28:34,  3.80s/it]  Round  600 | Error: 9.9% | c: 12.00 | Lambda: 0.2708
+Training:  32%|███▎      | 650/2000 [36:13<1:25:46,  3.81s/it]  Round  650 | Error: 9.2% | c: 11.90 | Lambda: 0.6574
+Training:  35%|███▌      | 700/2000 [39:05<1:36:00,  4.43s/it]  Round  700 | Error: 10.0% | c: 12.00 | Lambda: 0.3486
+Training:  38%|███▊      | 750/2000 [41:53<1:16:31,  3.67s/it]  Round  750 | Error: 12.3% | c: 11.82 | Lambda: 0.4631
+Training:  40%|████      | 800/2000 [44:42<1:20:10,  4.01s/it]  Round  800 | Error: 13.3% | c: 12.00 | Lambda: 0.8974
+Training:  42%|████▎     | 850/2000 [47:30<1:17:29,  4.04s/it]  Round  850 | Error: 14.3% | c: 11.93 | Lambda: 0.4873
+Training:  45%|████▌     | 900/2000 [50:22<1:11:13,  3.88s/it]  Round  900 | Error: 14.2% | c: 11.95 | Lambda: 0.5115
+Training:  48%|████▊     | 950/2000 [53:10<1:14:49,  4.28s/it]  Round  950 | Error: 14.0% | c: 12.00 | Lambda: 0.8333
+Training:  50%|█████     | 1000/2000 [55:58<1:01:45,  3.71s/it]  Round 1000 | Error: 15.2% | c: 12.00 | Lambda: 0.5746
+Training:  52%|█████▎    | 1050/2000 [58:45<59:57,  3.79s/it]  Round 1050 | Error: 17.8% | c: 11.90 | Lambda: 1.2427
+Training:  55%|█████▌    | 1100/2000 [1:01:27<55:51,  3.72s/it]  Round 1100 | Error: 19.5% | c: 11.73 | Lambda: 1.3355
+Training:  57%|█████▊    | 1150/2000 [1:04:08<52:15,  3.69s/it]  Round 1150 | Error: 21.3% | c: 12.00 | Lambda: 2.0892
+Training:  60%|██████    | 1200/2000 [1:06:50<48:46,  3.66s/it]  Round 1200 | Error: 28.3% | c: 11.75 | Lambda: 0.8540
+Training:  62%|██████▎   | 1250/2000 [1:09:33<52:47,  4.22s/it]  Round 1250 | Error: 36.2% | c: 12.00 | Lambda: 0.8931
+Training:  65%|██████▌   | 1300/2000 [1:12:22<44:25,  3.81s/it]  Round 1300 | Error: 42.9% | c: 11.80 | Lambda: 1.3427
+Training:  68%|██████▊   | 1350/2000 [1:15:04<39:03,  3.60s/it]  Round 1350 | Error: 47.8% | c: 11.82 | Lambda: 0.8387
+Training:  70%|███████   | 1400/2000 [1:17:52<43:46,  4.38s/it]  Round 1400 | Error: 54.9% | c: 12.00 | Lambda: 1.3755
+Training:  72%|███████▎  | 1450/2000 [1:20:39<34:53,  3.81s/it]  Round 1450 | Error: 68.2% | c: 12.00 | Lambda: 1.5219
+Training:  75%|███████▌  | 1500/2000 [1:23:22<35:36,  4.27s/it]  Round 1500 | Error: 72.1% | c: 11.86 | Lambda: 5.5694
+Training:  78%|███████▊  | 1550/2000 [1:26:05<27:14,  3.63s/it]  Round 1550 | Error: 76.8% | c: 12.00 | Lambda: 2.3529
+Training:  80%|████████  | 1600/2000 [1:28:48<27:47,  4.17s/it]  Round 1600 | Error: 90.8% | c: 11.96 | Lambda: 0.0000
+Training:  82%|████████▎ | 1650/2000 [1:31:31<21:48,  3.74s/it]  Round 1650 | Error: 90.8% | c: 8.97 | Lambda: 0.0000
+Training:  85%|████████▌ | 1700/2000 [1:34:17<20:00,  4.00s/it]  Round 1700 | Error: 90.8% | c: 7.39 | Lambda: 0.0000
+Training:  88%|████████▊ | 1750/2000 [1:37:05<16:43,  4.01s/it]  Round 1750 | Error: 90.8% | c: 7.00 | Lambda: 0.0000
+Training:  90%|█████████ | 1800/2000 [1:39:45<12:30,  3.75s/it]  Round 1800 | Error: 90.8% | c: 7.10 | Lambda: 0.0000
+Training:  92%|█████████▎| 1850/2000 [1:42:27<09:24,  3.77s/it]  Round 1850 | Error: 90.8% | c: 7.00 | Lambda: 0.0000
+Training:  95%|█████████▌| 1900/2000 [1:45:07<06:40,  4.01s/it]  Round 1900 | Error: 90.8% | c: 7.13 | Lambda: 0.0000
+Training:  98%|█████████▊| 1950/2000 [1:47:50<03:10,  3.81s/it]  Round 1950 | Error: 90.8% | c: 7.43 | Lambda: 0.0000
+Training: 100%|██████████| 2000/2000 [1:50:34<00:00,  3.32s/it]
+  Round 2000 | Error: 90.8% | c: 7.00 | Lambda: 0.0000
+
+  Final Testing Error: 90.76%
+
+#################################################################
+# EXPERIMENT 2: SSW-PoisonedFL (Backdoor + SW Combined)
+#################################################################
+
+=================================================================
+  Dataset: MNIST | Defense: multi_krum | Attack: poisonedfl
+  Mode: SSW-PoisonedFL (BACKDOOR + SW)
+=================================================================
+  Attack: SSW-PoisonedFL | Data Pool Sizes: Train=300, Val=150, Test=150
+  d=139,960 | n_genuine=1200 | n_fake=300 | rounds=2000
+
+Training:   0%|          | 1/2000 [00:05<3:15:41,  5.87s/it]  Round    1 | Error: 90.2% | CleanAcc: 9.8% | Global BSR: 100.0% | Val BSR: 100.0% | Test BSR: 100.0% | c: 8.50 
+Training:   2%|▎         | 50/2000 [02:59<2:11:33,  4.05s/it]  Round   50 | Error: 34.5% | CleanAcc: 65.5% | Global BSR: 11.8% | Val BSR: 6.4% | Test BSR: 10.4% | c: 12.00 
+Training:   5%|▌         | 100/2000 [06:02<2:13:26,  4.21s/it]  Round  100 | Error: 15.7% | CleanAcc: 84.3% | Global BSR: 1.4% | Val BSR: 0.7% | Test BSR: 0.7% | c: 11.72 
+Training:   8%|▊         | 150/2000 [09:07<2:16:52,  4.44s/it]  Round  150 | Error: 13.8% | CleanAcc: 86.2% | Global BSR: 4.4% | Val BSR: 2.1% | Test BSR: 3.0% | c: 12.00 
+Training:  10%|█         | 200/2000 [12:10<2:05:27,  4.18s/it]  Round  200 | Error: 11.6% | CleanAcc: 88.4% | Global BSR: 2.8% | Val BSR: 1.4% | Test BSR: 2.2% | c: 11.70 
+Training:  12%|█▎        | 250/2000 [15:12<2:03:12,  4.22s/it]  Round  250 | Error: 9.8% | CleanAcc: 90.2% | Global BSR: 0.9% | Val BSR: 0.0% | Test BSR: 0.7% | c: 12.00 
+Training:  15%|█▌        | 300/2000 [18:09<1:52:39,  3.98s/it]  Round  300 | Error: 8.9% | CleanAcc: 91.1% | Global BSR: 0.8% | Val BSR: 0.0% | Test BSR: 0.7% | c: 12.00 
+Training:  18%|█▊        | 350/2000 [21:08<1:53:55,  4.14s/it]  Round  350 | Error: 8.3% | CleanAcc: 91.7% | Global BSR: 0.8% | Val BSR: 0.0% | Test BSR: 0.7% | c: 11.69 
+Training:  20%|██        | 400/2000 [24:02<1:50:23,  4.14s/it]  Round  400 | Error: 7.7% | CleanAcc: 92.3% | Global BSR: 1.3% | Val BSR: 0.0% | Test BSR: 0.7% | c: 12.00 
+Training:  22%|██▎       | 450/2000 [26:59<1:43:20,  4.00s/it]  Round  450 | Error: 7.2% | CleanAcc: 92.8% | Global BSR: 1.6% | Val BSR: 0.0% | Test BSR: 1.5% | c: 11.65 
+Training:  25%|██▌       | 500/2000 [29:59<1:46:17,  4.25s/it]  Round  500 | Error: 6.7% | CleanAcc: 93.3% | Global BSR: 1.0% | Val BSR: 0.0% | Test BSR: 0.7% | c: 12.00 
+Training:  28%|██▊       | 550/2000 [32:57<1:43:05,  4.27s/it]  Round  550 | Error: 6.3% | CleanAcc: 93.7% | Global BSR: 2.6% | Val BSR: 0.7% | Test BSR: 4.4% | c: 12.00 
+Training:  30%|███       | 600/2000 [35:56<1:35:26,  4.09s/it]  Round  600 | Error: 6.0% | CleanAcc: 94.0% | Global BSR: 2.9% | Val BSR: 1.4% | Test BSR: 4.4% | c: 12.00 
+Training:  32%|███▎      | 650/2000 [38:56<1:29:58,  4.00s/it]  Round  650 | Error: 5.6% | CleanAcc: 94.4% | Global BSR: 4.8% | Val BSR: 3.5% | Test BSR: 5.9% | c: 11.90 
+Training:  35%|███▌      | 700/2000 [41:58<1:36:41,  4.46s/it]  Round  700 | Error: 5.2% | CleanAcc: 94.8% | Global BSR: 6.3% | Val BSR: 4.3% | Test BSR: 6.7% | c: 12.00 
+Training:  38%|███▊      | 750/2000 [44:58<1:24:42,  4.07s/it]  Round  750 | Error: 4.9% | CleanAcc: 95.1% | Global BSR: 5.8% | Val BSR: 3.5% | Test BSR: 5.2% | c: 11.82 
+Training:  40%|████      | 800/2000 [47:55<1:22:26,  4.12s/it]  Round  800 | Error: 4.7% | CleanAcc: 95.3% | Global BSR: 6.3% | Val BSR: 5.0% | Test BSR: 5.2% | c: 12.00 
+Training:  42%|████▎     | 850/2000 [50:59<1:26:54,  4.53s/it]  Round  850 | Error: 4.5% | CleanAcc: 95.5% | Global BSR: 14.9% | Val BSR: 14.9% | Test BSR: 17.0% | c: 11.93 
+Training:  45%|████▌     | 900/2000 [54:03<1:17:24,  4.22s/it]  Round  900 | Error: 4.4% | CleanAcc: 95.6% | Global BSR: 32.7% | Val BSR: 36.9% | Test BSR: 42.2% | c: 11.95 
+Training:  48%|████▊     | 950/2000 [57:05<1:18:00,  4.46s/it]  Round  950 | Error: 4.2% | CleanAcc: 95.8% | Global BSR: 34.8% | Val BSR: 39.7% | Test BSR: 44.4% | c: 12.00 
+Training:  50%|█████     | 1000/2000 [1:00:09<1:07:46,  4.07s/it]  Round 1000 | Error: 4.2% | CleanAcc: 95.8% | Global BSR: 43.9% | Val BSR: 48.9% | Test BSR: 53.3% | c: 12.00 
+Training:  52%|█████▎    | 1050/2000 [1:03:16<1:05:22,  4.13s/it]  Round 1050 | Error: 4.0% | CleanAcc: 96.0% | Global BSR: 53.9% | Val BSR: 59.6% | Test BSR: 61.5% | c: 11.90 
+Training:  55%|█████▌    | 1100/2000 [1:06:16<1:03:23,  4.23s/it]  Round 1100 | Error: 4.0% | CleanAcc: 96.0% | Global BSR: 42.6% | Val BSR: 49.6% | Test BSR: 47.4% | c: 11.73 
+Training:  57%|█████▊    | 1150/2000 [1:09:14<56:21,  3.98s/it]  Round 1150 | Error: 4.2% | CleanAcc: 95.8% | Global BSR: 72.6% | Val BSR: 83.0% | Test BSR: 82.2% | c: 12.00 
+Training:  60%|██████    | 1200/2000 [1:12:15<55:08,  4.14s/it]  Round 1200 | Error: 4.1% | CleanAcc: 95.9% | Global BSR: 79.0% | Val BSR: 84.4% | Test BSR: 84.4% | c: 11.75 
+Training:  62%|██████▎   | 1250/2000 [1:15:16<58:06,  4.65s/it]  Round 1250 | Error: 4.1% | CleanAcc: 95.9% | Global BSR: 81.3% | Val BSR: 85.8% | Test BSR: 86.7% | c: 12.00 
+Training:  65%|██████▌   | 1300/2000 [1:18:19<46:35,  3.99s/it]  Round 1300 | Error: 5.5% | CleanAcc: 94.5% | Global BSR: 96.6% | Val BSR: 97.9% | Test BSR: 97.8% | c: 11.80 
+Training:  68%|██████▊   | 1350/2000 [1:21:17<43:48,  4.04s/it]  Round 1350 | Error: 5.0% | CleanAcc: 95.0% | Global BSR: 97.7% | Val BSR: 98.6% | Test BSR: 98.5% | c: 11.82 
+Training:  70%|███████   | 1400/2000 [1:24:20<46:39,  4.67s/it]  Round 1400 | Error: 6.0% | CleanAcc: 94.0% | Global BSR: 99.3% | Val BSR: 98.6% | Test BSR: 100.0% | c: 12.00 
+Training:  72%|███████▎  | 1450/2000 [1:27:22<37:01,  4.04s/it]  Round 1450 | Error: 5.3% | CleanAcc: 94.7% | Global BSR: 99.3% | Val BSR: 98.6% | Test BSR: 99.3% | c: 12.00 
+Training:  75%|███████▌  | 1500/2000 [1:30:19<39:01,  4.68s/it]  Round 1500 | Error: 5.3% | CleanAcc: 94.7% | Global BSR: 99.6% | Val BSR: 99.3% | Test BSR: 100.0% | c: 11.86 
+Training:  78%|███████▊  | 1550/2000 [1:33:17<29:47,  3.97s/it]  Round 1550 | Error: 5.0% | CleanAcc: 95.0% | Global BSR: 99.5% | Val BSR: 98.6% | Test BSR: 100.0% | c: 12.00 
+Training:  80%|████████  | 1600/2000 [1:36:16<29:40,  4.45s/it]  Round 1600 | Error: 5.7% | CleanAcc: 94.3% | Global BSR: 99.0% | Val BSR: 98.6% | Test BSR: 99.3% | c: 11.96 
+Training:  82%|████████▎ | 1650/2000 [1:39:15<23:42,  4.06s/it]  Round 1650 | Error: 7.7% | CleanAcc: 92.3% | Global BSR: 98.8% | Val BSR: 97.9% | Test BSR: 99.3% | c: 11.89 
+Training:  85%|████████▌ | 1700/2000 [1:42:18<21:31,  4.31s/it]  Round 1700 | Error: 8.6% | CleanAcc: 91.4% | Global BSR: 97.6% | Val BSR: 97.9% | Test BSR: 99.3% | c: 12.00 
+Training:  88%|████████▊ | 1750/2000 [1:45:20<17:35,  4.22s/it]  Round 1750 | Error: 9.7% | CleanAcc: 90.3% | Global BSR: 97.5% | Val BSR: 97.2% | Test BSR: 98.5% | c: 11.97 
+Training:  90%|█████████ | 1800/2000 [1:48:14<13:35,  4.08s/it]  Round 1800 | Error: 14.5% | CleanAcc: 85.5% | Global BSR: 99.5% | Val BSR: 99.3% | Test BSR: 99.3% | c: 12.00 
+Training:  92%|█████████▎| 1850/2000 [1:51:13<10:00,  4.00s/it]  Round 1850 | Error: 9.7% | CleanAcc: 90.3% | Global BSR: 96.1% | Val BSR: 96.5% | Test BSR: 97.8% | c: 11.76 
+Training:  95%|█████████▌| 1900/2000 [1:54:08<07:04,  4.25s/it]  Round 1900 | Error: 10.5% | CleanAcc: 89.5% | Global BSR: 95.1% | Val BSR: 95.0% | Test BSR: 97.0% | c: 12.00 
+Training:  98%|█████████▊| 1950/2000 [1:57:10<03:26,  4.13s/it]  Round 1950 | Error: 9.7% | CleanAcc: 90.3% | Global BSR: 94.0% | Val BSR: 95.7% | Test BSR: 97.0% | c: 12.00 
+Training: 100%|██████████| 2000/2000 [2:00:10<00:00,  3.61s/it]
+  Round 2000 | Error: 12.9% | CleanAcc: 87.1% | Global BSR: 97.5% | Val BSR: 97.2% | Test BSR: 97.8% | c: 11.75 
+
+  Final Testing Error: 12.87%
+  Final Malicious Test BSR: 97.78%
+
+Generating  comparison graphs...
+
+Graph saved: ssw_results.png
+Done!
+
